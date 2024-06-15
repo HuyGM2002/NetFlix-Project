@@ -1,0 +1,218 @@
+@import '../../variable';
+
+.details {
+    display: none;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    z-index: 400;
+    height: 65%;
+    margin: 0 auto;
+    color: $color-white;
+    box-shadow: 0 15px 40px rgba($color-dark, 0.2);
+    transition: all 0.3s ease;
+}
+
+.exit {
+    position: absolute;
+    top: 10%;
+    right: 31px;
+    font-size: 22px;
+    color: rgba(266, 266, 266, 0.6);
+    transition: all 0.5s;
+
+    &:hover {
+        cursor: pointer;
+        color: red;
+    }
+}
+
+.cancel {
+    position: absolute;
+    right: 4px;
+    top: -44px;
+    font-size: 35px;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.container {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.94) 60%, transparent);
+}
+
+.trailerVideo {
+    position: absolute;
+    top: -20%;
+    left: 10%;
+    transition: all 0.4s;
+}
+
+.movieInfo {
+    width: 65%;
+    height: 100%;
+    padding-left: 24px;
+    color: $color-white;
+    font-size: 18px;
+    padding-top: 30px;
+
+    & * {
+        padding: 10px 0;
+    }
+}
+
+.movieRate {
+    font-size: 18px;
+    margin-right: 20px;
+    color: $color-green;
+}
+
+.overView {
+    // margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+    color: $grey-color;
+}
+
+.moviePopular {
+    font-size: 18px;
+    color: $yellow-color;
+}
+
+.show {
+    animation: fadeIn 0.6s 1 linear forwards;
+}
+
+.hide {
+    animation: fadeOut 0.6s 1 linear forwards;
+}
+
+.btn {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+}
+
+.downloadMovies {
+    width: 250px;
+    height: 40px;
+    background-color: $blue-color2;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.TrailerReview {
+    width: 250px;
+    height: 40px;
+    background-color: orangered;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.icon {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 25%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        top: 25%;
+    }
+
+    to {
+        opacity: 0;
+        top: 0;
+    }
+}
+
+@media (max-width : 1184px) {
+    .modal {
+        height: 70%;
+    }
+
+    .container {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 40%, rgba(0, 0, 0, 0.733), transparent);
+        width: 88%;
+    }
+}
+
+@media (max-width : 980px) {
+    .modal {
+        height: 80%;
+    }
+
+    .container {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 50%, transparent);
+        width: 100%;
+    }
+}
+
+@media (max-width : 600px) {
+    .modal {
+        height: 80%;
+    }
+
+    .container {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 60%, transparent);
+    }
+
+    .movieInfo {
+        font-size: 16px;
+    }
+
+    .overView {
+        font-size: 14px;
+    }
+}

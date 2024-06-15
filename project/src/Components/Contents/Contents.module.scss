@@ -1,0 +1,29 @@
+@import '../../variable.scss';
+
+.wrapContent {
+    position: relative;
+    top: -1px;
+    height: fit-content;
+}
+
+.goToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    font-size: 20px;
+    z-index: 200;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: $color-white;
+    display: flex;
+    opacity: 0.5;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}

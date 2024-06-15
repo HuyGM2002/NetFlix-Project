@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.9.0",
+    "sass": "^1.58.3",
+    "styled-components": "^5.3.8"
+  }
+}
